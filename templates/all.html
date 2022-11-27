@@ -1,6 +1,6 @@
 <!-- complete list template -->
 
-{% extends "home.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 
@@ -10,5 +10,8 @@
   <strong>Status:</strong> {{ ele.status }} <br>
 <br>
 {% endfor %}
+<br>
+<p><a href="{{ url_for('logout') }}"> LOG OUT!</a></p>
+<br>
 
 {% endblock %}

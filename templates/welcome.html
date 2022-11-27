@@ -1,0 +1,17 @@
+<!-- welcome page template -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>
+<h3> Welcome! </h3> 
+<h3> Please log in to access the other API endpoints! </h3> 
+<br>
+<p><a href="{{ url_for('login') }}"> LOG IN!</a></p>
+<br>
+{% for message in get_flashed_messages() %}
+  {{ message }}
+{% endfor %}
+
+{% endblock %}
