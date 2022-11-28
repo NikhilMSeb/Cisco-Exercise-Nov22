@@ -35,7 +35,7 @@ There are 2 pre-requisite libraries for running this service - Flask and FLask-S
 
 *You can also add these prerequisites in a virtual environment by following the instructions [here](https://virtualenv.pypa.io/en/latest/installation.html)*
 
-> pip install Flask Flask-SQLAlchemy
+> pip install -U Flask Flask-SQLAlchemy pyjwt
 
 3. Setting up the test Database
 
@@ -104,5 +104,4 @@ Cloud computing
 * https://realpython.com/api-integration-in-python/
 * https://www.tutorialspoint.com/flask/index.htm
 * https://hackersandslackers.com/database-queries-sqlalchemy-orm/
-* https://realpython.com/token-based-authentication-with-flask/
-* https://docs.sqlalchemy.org/en/14/core/inspection.html
+* https://realpython.com/token-based-authentication-with-flask/ 
