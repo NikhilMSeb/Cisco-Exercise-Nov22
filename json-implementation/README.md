@@ -60,16 +60,16 @@ The 2 key functionalities of this service can be tested using the folllowing ste
 ADD new photo 
 
 ADD
-Follow the instructions to log in (feel free to try accessing other without)
+Follow the instructions to log in (feel free to try accessing other without) ??
 
 ADD
-After logging in, can follow list (same as below)
+After logging in ?? 
 
 3. Visit the following endpoint in your browser to see a list of all stored URLs and their statuses from the database: 
 
 > http://localhost:8000/v1/urlinfo/all
 
-ADD new photo 
+ADD output
 
 4. Visit the following endpoint in your browser (with your own input) to obtain the status of a specific URL in the database: 
 
@@ -77,9 +77,9 @@ ADD new photo
 
 *[Available URLs in dummy data: cisco.com, evil.com, google.com, criminal.com, nikhil.accept, nikhil.reject]*
 
-ADD new photo 
+ADD output
 
-ADD logging out try - play around as you like! 
+ADD logging out ??
 
 ## Additional Development 
 
@@ -105,3 +105,4 @@ Cloud computing
 * https://www.tutorialspoint.com/flask/index.htm
 * https://hackersandslackers.com/database-queries-sqlalchemy-orm/
 * https://realpython.com/token-based-authentication-with-flask/
+* https://docs.sqlalchemy.org/en/14/core/inspection.html
