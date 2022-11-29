@@ -48,7 +48,7 @@ def login_required(f):
 
 
 # Pre log in landing page 
-@app.route('/')
+@app.route("/")
 def welcome():
     return render_template('welcome.html') 
 
@@ -61,7 +61,7 @@ def home():
 
 
 # Handling the authentication and authorization (logging in and logging out)
-@app.route('/login', methods=['GET', 'POST'])
+@app.route("/login", methods=['GET', 'POST'])
 def login():
     error = None
     if (request.method == 'POST'):
@@ -72,7 +72,7 @@ def login():
             return redirect(url_for('home'))
     return render_template('login.html', error=error)
 
-@app.route('/logout')
+@app.route("/logout")
 @login_required
 def logout():
     session.pop('logged_in', None)

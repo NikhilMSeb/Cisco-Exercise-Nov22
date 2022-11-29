@@ -82,6 +82,10 @@ ADD new photo
 
 ADD logging out try - play around as you like! 
 
+ADD :
+
+> python .\test.py -v
+
 ## Additional Development 
 
 1. The size of the URL list could grow infinitely, how might you scale this beyond the memory capacity of the system? 
@@ -105,4 +109,4 @@ Cloud computing
 * https://realpython.com/api-integration-in-python/
 * https://www.tutorialspoint.com/flask/index.htm
 * https://hackersandslackers.com/database-queries-sqlalchemy-orm/
-* https://realpython.com/token-based-authentication-with-flask/
+* https://www.reddit.com/r/flask/comments/5l2gmf/af_eli5_how_sessions_work_in_flask/ 
