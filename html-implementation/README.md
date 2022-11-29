@@ -6,7 +6,7 @@ This directory contains the exercise solution implemented such that the outputs 
 
 1. Lookup Web Service API 
 
-An industry standard for building APIs is the REST architecture, and of the many frameworks for building REST APIs with Python that this service uses is **Flask**. 
+An industry standard for building APIs is the REST architecture, and of the many frameworks for building REST APIs with Python this service uses **Flask**. 
 Flask provides all the key requirements for this service out-of-the-box without needing too much overhead infrastructure. 
 Flask is also easy to deploy to production, and has comprehensive documentation and support due to its existing wide usage. 
 
