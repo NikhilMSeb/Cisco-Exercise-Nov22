@@ -61,7 +61,7 @@ The 2 key functionalities of this service can be tested using the folllowing ste
 
 > python app.py
 
-2. Visit the landing endpoint of the API below in your browser and confirm it is running with no issues: 
+2. Visit the landing endpoint of the API below in your browser (preferably Google Chrome) and confirm it is running with no issues: 
 
 > http://localhost:8000
 
