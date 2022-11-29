@@ -4,14 +4,13 @@ This directory contains the exercise solution implemented such that the outputs 
 
 ## Design Choices & Overview  
 
-1. Lookup Web Service API 
+1. Lookup Service API 
 
 An industry standard for building APIs is the REST architecture, and of the many frameworks for building REST APIs with Python this service uses **Flask**. 
 Flask provides all the key requirements for this service out-of-the-box without needing too much overhead infrastructure. 
 Flask is also easy to deploy to production, and has comprehensive documentation and support due to its existing wide usage. 
 
-In the current implementation, I have constructed HTML webpages to explicitly demonstrate the outputs. 
-This service can easily be adapted to instead provide outputs to be used internally by JSON serializing the responses of the GET requests. 
+In the current implementation, I have built all API endpoints to be accessed, handled and provide outputs in JSON and through direct API requests, hence allowing this to be directly integrated with a service that wants to perform a lookup as a single part of a larger workflow. 
 
 2. Database of Malware URLs 
 
@@ -37,7 +36,7 @@ This would allow for more complex password hashing (as provided by the "werkzeug
 
 Assuming that both Python (3.x) and Pip are installed in your system (if not refer [this](https://www.python.org/downloads/) for installing both, or [this](https://pip.pypa.io/en/stable/installation/) for pip):
 
-There are 2 pre-requisite libraries for running this service - Flask and FLask-SQLAlchemy - both of which can be installed using the following terminal command: 
+There are 3 pre-requisite libraries for running this service - Flask, FLask-SQLAlchemy and PyJWT - all of which can be installed using the following terminal command: 
 
 *You can also add these prerequisites in a virtual environment by following the instructions [here](https://virtualenv.pypa.io/en/latest/installation.html)*
 
@@ -65,47 +64,53 @@ Following that, the 2 key functionalities of this service can be tested using th
 
 2. Visit the landing endpoint of the API below through a Postman GET request (refer picture), and confirm it is running with no issues: 
 
-> http://localhost:8000
+> http://127.0.0.1:8000/
 
-ADD Postman Get request 
+Request:
+![image](https://user-images.githubusercontent.com/46250395/204472445-7ec3eeb2-0684-43fc-a031-71a42f73d711.png)
 
-ADD response photo 
+Response: 
+![image](https://user-images.githubusercontent.com/46250395/204472543-88bd8616-0966-40e0-aeb7-a1506c865c3c.png) 
 
 3. Authenticate through login via the endpoint below through a Postman POST request (refer picture) using username and password both as "admin":
 
-> http://localhost:8000/login
+> http://127.0.0.1:8000/login
 
-ADD Postman Post request 
+Request:
+![image](https://user-images.githubusercontent.com/46250395/204473169-a82918a8-05b2-4ebc-8c44-8fadfe96d9b9.png)
 
 Alternatively you can also attempt to access any of the further endpoints below, but you will be met with a log in requirement!
 
 Make note of the 'api-access-token' in the response as that will be your **authorization token** moving forward. 
 
-ADD response photo 
+Response:
+![image](https://user-images.githubusercontent.com/46250395/204473638-7b691650-5b90-4d02-a6eb-22b365eca0b8.png)
 
 4. Visit the following endpoint through a Postman GET request (refer picture) to see a list of all stored URLs and their statuses from the database: 
 
+> http://127.0.0.1:8000/v1/urlinfo/all
+
 **Note:** You need to first add the authorization token to the header of your request to gain access 
 
-ADD Header photo 
+Request:
+![image](https://user-images.githubusercontent.com/46250395/204474248-5a6abdb9-f3a2-494e-a5ea-7352c687173b.png)
 
-> http://localhost:8000/v1/urlinfo/all
-
-ADD Postman Get request 
-
-ADD response photo
+Response:
+![image](https://user-images.githubusercontent.com/46250395/204474513-b3f83851-c189-4473-a49b-ec8c889acde0.png)
 
 5. Visit the following endpoint through a Postman GET request (refer picture) with your own input to obtain the status of a specific URL in the database: 
 
 **Note:** Continue to add the authorization token to the header of your request to gain access 
 
-> http://localhost:8000/v1/urlinfo/{url}
+> http://127.0.0.1:8000/v1/urlinfo/{url}
 
 *[Available URLs in dummy data: cisco.com, evil.com, google.com, criminal.com, nikhil.accept, nikhil.reject]*
 
-ADD Postman Get request cisco 
+Request:
+![image](https://user-images.githubusercontent.com/46250395/204474898-561ca78c-71fc-484f-b8c0-64c13570bebc.png)
 
-ADD response photo
+Response:
+![image](https://user-images.githubusercontent.com/46250395/204474756-761d1f7a-9450-4be1-8e33-9eb598c348b4.png)
 
 6. Play around as you like!
 
