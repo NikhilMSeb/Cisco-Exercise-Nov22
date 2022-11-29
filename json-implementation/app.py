@@ -1,7 +1,7 @@
 import os, json, datetime
 from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy 
-import jwt 
+import jwt                                  # I am using Java Web Tokens to authenticate and maintain access to the core API endpoints 
 from functools import wraps                 # Python standard package 
 
 
@@ -44,6 +44,7 @@ def login_required(f):
             token = request.headers['api-access-token']
         if (not token):
             return jsonify({"message": "Authentication token missing!!"})
+        # Decoding provided authorization token and verifying it 
         data = jwt.decode(token, app.config['SECRET_KEY'], algorithms='HS256')
         if (data["password"] != "admin"):       # Arbitrary value maintained (refer below)
             return jsonify({"message": "Invalid token provided!!"})
@@ -66,7 +67,7 @@ def login():
         if ((data['username'] != 'admin') or (data['password'] != 'admin')):                    # Arbitrarily set credentials (refer README)
             return jsonify({"message" : "Incorrect Username and/or Password. Try again!"}) 
         else:
-            # Setting authentication token with a 60 minute expiry 
+            # Setting authorization token with a 60 minute expiry 
             token = jwt.encode({"password" : "admin", "exp" : datetime.datetime.utcnow() + datetime.timedelta(minutes=60)}, app.config['SECRET_KEY'])
             return jsonify({"message" : "Logged in successfully!", "api-access-token" : token})
 

@@ -6,7 +6,10 @@ The question statement can be found [here](https://github.com/NikhilMSeb/Cisco-E
 
 There are 2 ways I have completed this exercise:
 
-1. HTML-based implementation (initial idea)
-2. JSON-based implementation 
+1. HTML-based implementation (initial idea): output is delivered in web pages through a portal (eg: browsers)
+    * Rationale: provides the same underlying functionality but with explicit visual cues (which I thought suits a "coding exercise")
 
-Both implemenations cover the requirements of the Malware URL lookup as required, with all the other necessary peripherals. Each can be accessed in the respective directories, and each directory has a dedicated README explaining what needs to be done to setup, run and test the service in each case. 
+2. JSON-based implementation: output is delivered 
+    * Rationale: more geared towards working as an API service that can be used by other services as an endpoint directly 
+
+Both implemenations cover the requirements of the Malware URL lookup as described in the problem statement, with all the other necessary peripherals. Each can be accessed in the respective directories, and each directory has a dedicated README explaining what needs to be done to setup, run and test the service in each case, as well as answering further questions posed in the exercise. 
