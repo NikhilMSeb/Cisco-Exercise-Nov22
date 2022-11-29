@@ -6,7 +6,7 @@ This directory contains the exercise solution implemented such that the outputs 
 
 1. Lookup Web Service API 
 
-An industry standard for building APIs is the REST architecture, and of the many frameworks for building REST APIs with Python this service uses **Flask**. 
+An industry standard for building APIs is the REST architecture, and of the many frameworks for building REST APIs with Python that this service uses is **Flask**. 
 Flask provides all the key requirements for this service out-of-the-box without needing too much overhead infrastructure. 
 Flask is also easy to deploy to production, and has comprehensive documentation and support due to its existing wide usage. 
 
@@ -65,11 +65,11 @@ The 2 key functionalities of this service can be tested using the folllowing ste
 
 > http://localhost:8000
 
-ADD opening photo 
+![image](https://user-images.githubusercontent.com/46250395/204469567-febfb965-060d-4e23-8eae-d19d504ddb77.png)
 
 3. Follow the prompt to the log in page, and do so with username and password both as "admin": 
 
-ADD login photo 
+![image](https://user-images.githubusercontent.com/46250395/204469682-1ea451d3-2355-47fb-860a-bdcd77a80aae.png)
 
 The login page can also be accessed manually at the following endpoint - 
 
@@ -79,13 +79,13 @@ Alternatively you can also attempt to access any of the further endpoints below,
 
 After logging in, you will reach the "home" page and you can follow the prompt on screen to access the Malware URLs list (same as Step 4 below)
 
-ADD home page photo
+![image](https://user-images.githubusercontent.com/46250395/204469782-7c6cc2c9-17dd-4020-ac04-3cad44510e27.png)
 
 4. Visit the following endpoint in your browser to see a list of all stored URLs and their statuses from the database: 
 
 > http://localhost:8000/v1/urlinfo/all
 
-ADD new photo 
+![image](https://user-images.githubusercontent.com/46250395/204469875-797379fa-fbd1-4ca1-bfec-471481960be8.png)
 
 5. Visit the following endpoint in your browser (with your own input) to obtain the status of a specific URL in the database: 
 
@@ -93,7 +93,7 @@ ADD new photo
 
 *[Available URLs in dummy data: cisco.com, evil.com, google.com, criminal.com, nikhil.accept, nikhil.reject]*
 
-ADD new photo cisco 
+![image](https://user-images.githubusercontent.com/46250395/204469962-abb6060c-38a0-4c32-aa2c-d9bbe34855a7.png)
 
 6. Play around as you like! 
 
