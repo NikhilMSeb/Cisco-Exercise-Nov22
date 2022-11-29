@@ -81,6 +81,10 @@ ADD output
 
 ADD logging out ??
 
+ADD :
+
+> python .\test.py -v
+
 ## Additional Development 
 
 1. The size of the URL list could grow infinitely, how might you scale this beyond the memory capacity of the system? 

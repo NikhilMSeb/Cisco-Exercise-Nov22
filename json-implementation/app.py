@@ -68,7 +68,7 @@ def login():
         else:
             # Setting authentication token with a 60 minute expiry 
             token = jwt.encode({"password" : "admin", "exp" : datetime.datetime.utcnow() + datetime.timedelta(minutes=60)}, app.config['SECRET_KEY'])
-            return jsonify({"message" : "Logged in successfully!", "NOTE: api-access-token" : token})
+            return jsonify({"message" : "Logged in successfully!", "api-access-token" : token})
 
 
 # Handling GET request for all available malware URL database data 
